@@ -1,0 +1,192 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+h1, h2, h3 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+
+.mood-selector {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.mood-selector div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  background-color: #e0e0e0;
+}
+
+.mood-selector div:hover {
+  transform: scale(1.1);
+}
+
+.mood-selector div.selected {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #4caf50;
+  color: white;
+}
+
+
+.weather-display {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-display img {
+  width: 50px;
+  height: 50px;
+}
+
+
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.entry-form input,
+.entry-form textarea {
+  padding: 10px;
+  width: 80%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s ease-in-out;
+}
+
+.entry-form input:focus,
+.entry-form textarea:focus {
+  border: 1px solid #4caf50;
+  outline: none;
+}
+
+.entry-form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.entry-form button:hover {
+  background-color: #45a049;
+}
+
+
+.calendar-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.calendar-view div {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-view div:hover {
+  background-color: #f1f1f1;
+}
+
+
+.mood-chart {
+  margin-top: 20px;
+}
+
+.mood-chart div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.mood-chart span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .mood-selector {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .mood-selector div {
+    width: 50px;
+    height: 50px;
+  }
+
+  .entry-form input,
+  .entry-form textarea {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2, h3 {
+    font-size: 20px;
+  }
+
+  .mood-selector div {
+    width: 40px;
+    height: 40px;
+  }
+
+  .entry-form input,
+  .entry-form textarea {
+    width: 100%;
+  }
+}
