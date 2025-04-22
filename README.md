@@ -42,5 +42,5 @@ The **Interactive Mood Journal with Weather Integration** is a personal web appl
    ```bash
    git clone https://github.com/utkarshkorade
    /mood-journal.git
-   cd mood-journal
+   
    ```
